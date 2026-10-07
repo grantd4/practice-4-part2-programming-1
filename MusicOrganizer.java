@@ -77,6 +77,35 @@ public class MusicOrganizer
             System.out.println(filename);
         }
     }
+    //question 7 
+    public void listWithIndex()
+    {
+        for(int position = 0; position < files.size(); position++)
+        {
+            String filename = files.get(position);
+            System.out.println(position + ": " + filename);
+        }
+    }
+    //quesiton 8 and 9
+    public void listMatching(String searchString)
+    {
+        boolean found = false;
+        
+        for(String filename : files)
+        {
+            if(filename.contains(searchString))
+            {
+                System.out.println(filename);
+                found = true;
+            
+            }
+        }
+        
+        if(!found)
+        {System.out.println("No files matched.");
+    
+        }
+    }
     // quesiton 3
     /**
      * Remove a file from the collection.
